@@ -1,0 +1,31 @@
+   <!-- Base application theme. -->
+    <style name="Theme.CollegeApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red2</item>
+        <item name="colorSecondaryVariant">@color/pink</item>
+        <item name="colorOnSecondary">@color/green1</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#D242EC</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.addNotice:
+                Intent intent = new Intent(MainActivity.this, UploadNotice.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
+        uploadNotice = findViewById(R.id.addNotice);
+
+        uploadNotice.setOnClickListener(this);
+
+CardView uploadNotice;
